@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, orientation=portrait">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title>Tahera Shaikh</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <script>
+    // Lock the screen in portrait mode on page load
+    function lockPortrait() {
+      if (screen.orientation) {
+        screen.orientation.lock('portrait');
+      }
+    }
+
+    // Call the lockPortrait function when the page loads
+    window.addEventListener('DOMContentLoaded', lockPortrait);
+
+    // Send event to Google Analytics
+    document.getElementById('resume_button').addEventListener('click', function() {
+    gtag('send', 'event', 'Button', 'click', 'Resume Downloaded');
+  });
+
+  </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-82H8MMC0NW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-82H8MMC0NW');
+    </script>
+
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBzh7xxwke8CBpHE3JbNIVEU_eVTGoN-S0",
+    authDomain: "portfolio-6aee9.firebaseapp.com",
+    projectId: "portfolio-6aee9",
+    storageBucket: "portfolio-6aee9.appspot.com",
+    messagingSenderId: "49228172166",
+    appId: "1:49228172166:web:99f90d8283e09e8135ba07",
+    measurementId: "G-82H8MMC0NW"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Skills & Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="hamburger-menu" style="padding-left: 20rem;">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <div>
+    <section id="profile" style='margin-bottom:5rem'>
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Tahera Shaikh profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Tahera Shaikh</h1>
+        <p class="section__text__p2">Data Wizard and Software Engineer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            id='resume_button'
+            onclick="window.open('./assets/resume.pdf')"
+          >
+            Download Resume
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/taherashaikh/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/TaheraShaikh23'"
+          />
+          
+        </div>
+      </div>
+    </section>
+  </div>
+
+    <section id="about" >
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title" >About Me</h1>
+      <div class="section-container">
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>1+ year <br> <br>
+                <h4>Software Engineering Intern</h4> <br>
+                <h4>Assistant Professor</h4></p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+            </br>
+              <h4>Master of Science </h4><h5>Computer Science</h5><h6>Graduation: May 2024</h6><br>
+              <h4>Bachelor of Engineering</h4><h5>Information Technology</h5><h6>2014</h6>
+            </div>
+          </div>
+        </div>
+        <div class='about-containers'>
+          <div class="text-container">
+            <p>
+              Hey there!
+              <br><br>
+                I'm Tahera, and I'm thrilled to share a bit about myself with you. You know, I've always been fascinated by the incredible potential of technology to transform our world, and I've dedicated myself to being a part of that change.
+                <br><br>
+                I've had quite the journey in the realm of computer science, starting with my Bachelor's in Information Technology from the University of Mumbai, and then diving deeper with a Master's in Computer Engineering. Recently, I've added another feather to my cap with a Master's in Computer Science from Pace University in New York City.
+                <br><br>
+                You'll often find me immersed in a world of code, whether it's Python, Java, or any of the other languages I've tinkered with. But it's not just about coding; it's about using technology to solve real-world problems. From optimizing SQL scripts to creating seamless e-commerce experiences, I've had my hands in a bit of everything.
+                <br><br>
+                During my time as an Assistant Professor at Thakur College of Engineering and Technology in Mumbai, I got to blend my love for teaching with my passion for technology. Seeing my students light up with understanding was always the best part of my day.
+                <br><br>
+                Currently, I'm flexing my skills as an IT Intern at The Pension Boards of the United Church of Christ, Inc. It's been a whirlwind of learning opportunities, from automating processes to ensuring secure data transmission.
+                <br><br>
+                When I'm not knee-deep in code or buried in textbooks, you might find me lost in a good book, trying out a new recipe in the kitchen, or exploring the city streets with my camera in hand.
+                <br><br>
+                I'm really excited about what the future holds and the chance to make a meaningful impact in the world of technology. So, whether it's collaborating on a project, sharing ideas, or just chatting about the latest tech trends, I'm always up for a good conversation!
+                <br><br>
+                Looking forward to connecting with you,
+                Tahera
+              <br><br>
+
+             
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <div>
+    <section id="experience" style="align-content: center;">
+      <h1 class="title" style="text-align:center;">Skills and Work Experience</h1>
+      <br>
+
+          <section id="skills">
+
+ <div class="skills-container">
+            <h2 class="experience-sub-title" style="text-align: center;">Technical Skills</h2>
+
+  <div class="skill-row">
+    <!-- Programming Languages List -->
+    <div class="skill-column">
+      <h2>Programming Languages</h2>
+      <ul class="skills-list">
+        <li>Python</li>
+        <li>SQL</li>
+        <li>Java</li>
+        <li>C</li>
+        <li>C++</li>
+        <li>JavaScript</li>
+        <li>Swift</li>
+        <li>React Native</li>
+        <!-- Add more programming languages as needed -->
+      </ul>
+    </div>
+
+    <!-- Software Tools List -->
+    <div class="skill-column">
+      <h2>Software Tools</h2>
+      <ul class="skills-list">
+        <li>Github</li>
+        <li>Postman</li>
+        <li>Dremio</li>
+        <li>Jupyter Notebook</li>
+        <li>Android Studio</li>
+        <li>Jira</li>
+        <li>Jenkins</li>
+        <li>Visual Studio Code</li>
+        <li>Linux / UNIX</li>
+        <!-- Add more software tools as needed -->
+      </ul>
+    </div>
+
+    <!-- Deep Learning List -->
+    <div class="skill-column">
+      <h2>Deep Learning</h2>
+      <ul class="skills-list">
+        <li>TensorFlow</li>
+        <li>PyTorch</li>
+        <li>Keras</li>
+        <li>Generative Adversarial Networks (GAN)</li>
+        <!-- Add more deep learning skills as needed -->
+      </ul>
+    </div>
+
+
+    <!-- NLP List -->
+    <div class="skill-column">
+      <h2>NLP</h2>
+      <ul class="skills-list">
+        <li>Natural Language Toolkit (NLTK)</li>
+        <li>Word Embeddings (Word2Vec)</li>
+        <li>Named Entity Recognition</li>
+        <li>Text Classification</li>
+        <li>Sentiment Analysis</li>
+        <li>Language Models (GPT)</li>
+        <!-- Add more NLP skills as needed -->
+      </ul>
+    </div>
+
+    <!-- Machine Learning List -->
+    <div class="skill-column">
+      <h2>Machine Learning</h2>
+      <ul class="skills-list">
+        <li>Linear Regression</li>
+        <li>Logistic Regression</li>
+        <li>K-Means Clustering</li>
+        <li>PCA</li>
+        <li>XGBoost</li>
+        <li>CatBoost</li>
+        <li>SVM</li>
+        <li>Random Forest</li>
+        <li>AdaBoost</li>
+        <li>Scikit-Learn</li>
+        <li>FB Prophet</li>
+        <li>ARIMA</li>
+        <!-- Add more general machine learning skills as needed -->
+      </ul>
+    </div>
+
+    <!-- Data Engineering and Analytics List -->
+    <div class="skill-column">
+      <h2>Data Engineering and Analytics</h2>
+      <ul class="skills-list">
+        <li>NumPy</li>
+        <li>Pandas</li>
+        <li>Flask</li>
+        <li>BeautifulSoup</li>
+        <li>Selenium</li>
+        <li>Matplotlib</li>
+        <li>Seaborn</li>
+        <li>Tableau</li>
+        <li>Putty</li>
+        <li>SCP</li>
+        <li>FTP</li>
+        <li>Webhooks</li>
+        <!-- Add more data engineering and analytics tools as needed -->
+      </ul>
+    </div>
+
+    <!-- Cloud List -->
+    <div class="skill-column">
+      <h2>Cloud</h2>
+      <ul class="skills-list">
+        <li>AWS</li>
+        <li>Azure</li>
+        <li>Google Cloud</li>
+        <li>Firebase</li>
+        <!-- Add more cloud platforms as needed -->
+      </ul>
+    </div>
+
+    <!-- Certifications List -->
+    <div class="skill-column">
+      <h2>Certifications</h2>
+      <ul class="skills-list">
+        <li>AI For Everyone (Coursera)</li>
+        <li>SQL Function (Coursera)</li>
+        <li>Machine Learning A-Z™ (Udemy)</li>
+        <li>Python (Kaggle, HackerRank, DataCamp)</li>
+        <li>Android Development (Udemy)</li>
+        <!-- Add more certifications as needed -->
+      </ul>
+    </div>
+  </div>
+</div>
+
+</section>
+
+        </section>
+        </div>
+        
+
+        
+
+        <div class="details-container" >
+          <h2 class="experience-sub-title">Work Experience</h2>
+
+          <!-- Job 1 -->
+          <div class="job">
+            <h2>Data Engineer</h2>
+            <h3>Fractal Analytics (Crux Intelligence)</h3>
+            <p>Mumbai, India</p>
+            <p>08/2021 - 08/2022</p>
+            <br>
+            <li>Developed efficient data pipelines and automation scripts using Python, Tableau and SQL, resulting in a 60% reduction in execution time.</li>
+            <li>Designed analytical dashboards, boosting user adoption by 30%.</li>
+            <li>Conducted technical interviews and trained three team members.</li>
+            <p>Skills Used: Python, SQL, Tableau, AWS, Azure, Postman, Dremio, Linux, REST API, JavaScript</p>
+          </div>
+
+          <!-- Job 2 -->
+          <div class="job">
+            <h2>Senior Customer Success Engineer</h2>
+            <h3>CleverTap</h3>
+            <p>Mumbai, India</p>
+            <p>01/2019 - 08/2021</p>
+            <br>
+            <li>Resolved complex SDK integration issues for Android, iOS, and Web.</li>
+            <li>Innovated solutions in Java, JavaScript, HTML, CSS, and Python, increasing user adoption by 10% and retaining four clients.</li>
+            <li>Managed and mentored a team of 5, enhancing skills and productivity.</li>
+            <p>Skills Used: CleverTap SDK, Android Development, Web Development, Java, Swift, HTML, CSS, React Native, Postman, REST API, Python, AWS, GCP, Linux, JIRA</p>
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+    <section id="projects" >
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/AI.jpg"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Data Science Projects Repository</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/yashkantharia/Data-Science-Projects'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/ct.jpg"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">CleverTapper (Android App)</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/yashkantharia/CleverTapper-android'"
+              >
+                Github
+              </button>
+              
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/web.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">WebScrapper with Selenium</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/yashkantharia/Webscrapper_api'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+
+           <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/research.png"
+                alt="Project 4"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Research Paper</h2> <h5>Success Prediction using Random Forest, CatBoost, XGBoost and AdaBoost for Kickstarter Campaigns</h5> <br>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://ieeexplore.ieee.org/document/8819828'"
+              >
+                IEEE
+              </button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+  </div>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:yashkantharia17@gmail.com">yashkantharia17@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/yashkantharia">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+
+
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Skills & Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
